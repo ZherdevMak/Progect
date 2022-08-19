@@ -1,17 +1,19 @@
 import React from 'react';
-import ComponentTestPage from "../Pages/ComponentTestPage";
-import Error404 from "../Pages/Error404";
-import {Navigate, Route, Routes} from "react-router-dom";
+import stl from './Header.module.css'
 import {NavLink} from "react-router-dom";
 
 
 
 const Header = () => {
     return (
-        <div>
-            <NavLink to='/test-page'>Component Test Page</NavLink>
-            {/*<NavLink className={stl.menuItem} to='/junior'>Junior</NavLink>*/}
-            {/*<NavLink className={stl.menuItem} to='/junior+'>Junior+</NavLink>*/}
+        <div style ={{display:"inline-block",}} >
+            <NavLink className={stl.nav} to='/login'>Login</NavLink>
+            <NavLink className={stl.nav} to='/registration'>Registration</NavLink>
+            <NavLink className={stl.nav} to='/profile'>Profile</NavLink>
+            <NavLink className={stl.nav} to='/*'>Error</NavLink>
+            <NavLink className={stl.nav} to='/restore-password'>Restore password</NavLink>
+            <NavLink className={stl.nav} to='/new-password'>New password</NavLink>
+            <NavLink className={stl.nav} to='/test-page'>Component Test Page</NavLink>
 
         </div>
     );
